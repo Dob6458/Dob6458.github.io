@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:100,300,400,500,700,900|Roboto:100,300,400,500,700,900|Satisfy:100,300,400,500,700,900&display=swap');
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+
+  margin: auto;
+  background-color: #fafafa;
+}
+
+.header {
+  width: 100% auto;
+
+  position: sticky;
+
+  padding: 8px 16px;
+}
+
+.logo, .menus {
+  display: inline-block;
+}
+
+.menus {
+  position: absolute;
+
+  top: 0;
+  right: 16px;
+  bottom: 0;
+
+  line-height: 62px;
+}
+
+.menus > .menu {
+  padding-left: 4px;
+  padding-right: 4px;
+
+  color: white;
+  text-decoration: none;
+
+  user-select: none;
+}
+
+.menus > .menu:hover {
+  text-decoration: underline;
+}
+
+.presentation {
+  background-image: linear-gradient(
+    45deg, #3967d4, #68aae3
+  );
+}
+
+.welcome {
+  width: 100%;
+  height: 100px;
+
+  position: relative;
+
+  user-select: none;
+}
+
+.welcome > .w {
+  position: absolute;
+  margin: auto;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: fit-content;
+  height: fit-content;
+
+  color: white;
+  font-size: 60px;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3%;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(33%, auto);
+
+  grid-gap: 10px;
+}
+
+.project-grid {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.22);
+
+  background-color: white;
+
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 12px;
+
+  height: 140px;
+
+  position: relative;
+}
+
+.project-grid > .title {
+  text-align: center;
+  font-size: 21px;
+  
+  color: rgb(75, 75, 75);
+
+  padding: 4px 0;
+}
+
+.project-grid > .des {
+  text-align: center;
+  font-size: 16px;
+  
+  color: rgb(75, 75, 75);
+
+  padding: 4px 0;
+}
+
+.project-grid > button {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 4%;
+
+  padding: 8px 0;
+
+  font-family: Nunito;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  margin-top: 8px;
+
+  border-radius: 4px;
+  border: none;
+
+  background-color: #06bf56;
+  color: white;
+  font-weight: 700;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+}
+
+.project-grid > button:hover {
+  cursor: pointer;
+}
+
+.project-grid > button:hover {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.22);
+}
+
+h1, h2 {
+  font-weight: 100;
+
+  font-family: Nunito;
+}
+
+h3, h4, h5 {
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+h6 {
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  width: 100% auto;
+  padding: 12px 16px;
+
+  margin-top: 24px;
+
+  background-color: #212121;
+  color: white;
+}
+
+@media screen and (min-width: 748px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 852px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1107px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .welcome {
+    height: 160px;
+  }
+}
