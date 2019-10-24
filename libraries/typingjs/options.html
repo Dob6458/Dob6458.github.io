@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Dob6458/typingjs/libs/typing.js"></script>
 
     <!--
       Normal color: #06bf56
@@ -24,55 +23,58 @@
     -->
   </head>
   <body>
+    <div class="black"></div>
+    <div class="header">
+      <div class="logo">
+        <img
+          src="img/icon.png"
+          alt="img_logo"
+          width="42px"
+          height="42px" />
+      </div>
+      <button class="menu-icon">
+        <i class="material-icons">
+          menu
+        </i>
+      </button>
+      <div class="menus">
+        <a href="https://discord.gg/x8Pr7fq" class="menu">Rejoin us on Discord</a>
+        <a href="mailto:dob6458@outlook.com" class="menu">Contact us</a>
+        <a href="https://github.com/Dob6458" class="menu">Github</a>
+      </div>
+    </div>
     <div class="app">
-      <div class="presentation">
-        <div class="header">
-          <div class="logo">
-            <img
-              src="img/icon.png"
-              alt="img_logo"
-              width="42px"
-              height="42px" />
-          </div>
-          <div class="menus">
-            <a href="https://discord.gg/x8Pr7fq" class="menu">Rejoin us on Discord</a>
-            <a href="mailto:dob6458@outlook.com" class="menu">Contact us</a>
-            <a href="https://github.com/Dob6458" class="menu">Github</a>
-          </div>
-        </div>
-      </div>
       <div class="container">
-        <div class="summaries">
-          <a href="getstarted.html">Get Started</a>
-          <a class="disable" disabled>Options</a>
-          <a href="events.html">Events</a>
+        <div class="pages">
+          <div class="summaries">
+            <span class="item" onclick="window.open('getstarted.html', '_self')">Get Started</span>
+            <span class="item selected">Options</span>
+            <span class="item" onclick="window.open('events.html', '_self')">Events</span>
+          </div>
+          <div class="page">
+            <h1>Options</h1>
+            <div class="element">
+              <h2><code>string</code> option</h2>
+              Allow to write your sentence and type automatically
+            </div>
+            <div class="element">
+              <h2><code>color</code> option</h2>
+              Allow to change the color cursor
+            </div>
+            <div class="element">
+              <h2><code>transition</code> option</h2>
+              Allow to make a transition for the cursor
+            </div>
+            <div class="element">
+              <h2><code>speed</code> option</h2>
+              Allow to manage the spped cursor
+            </div>
+            <div class="element">
+              <h2><code>width</code> option</h2>
+              Allow to manage the width of the cursor
+            </div>
+          </div>
         </div>
-        <div class="page">
-          <h1>Options</h1>
-          <div class="element">
-            <h2><code>string</code> option</h2>
-            Allow to mark your sentence and type automatically
-          </div>
-          <div class="element">
-            <h2><code>color</code> option</h2>
-            Allow to change the color cursor
-          </div>
-          <div class="element">
-            <h2><code>transition</code> option</h2>
-            Allow to make a transition for the cursor
-          </div>
-          <div class="element">
-            <h2><code>speed</code> option</h2>
-            Allow to manage the spped cursor
-          </div>
-          <div class="element">
-            <h2><code>width</code> option</h2>
-            Allow to manage the width of the cursor
-          </div>
-        </div>
-      </div>
-      <div class="footer">
-        Created by Dob6458 (// Zohir) - 2019&copy;
       </div>
     </div>
 

@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Dob6458/typingjs/libs/typing.js"></script>
 
     <!--
       Normal color: #06bf56
@@ -24,75 +23,63 @@
     -->
   </head>
   <body>
-    <div class="app">
-      <div class="presentation">
-        <div class="header">
-          <div class="logo">
-            <img
-              src="img/icon.png"
-              alt="img_logo"
-              width="42px"
-              height="42px" />
-          </div>
-          <div class="menus">
-            <a href="https://discord.gg/x8Pr7fq" class="menu">Rejoin us on Discord</a>
-            <a href="mailto:dob6458@outlook.com" class="menu">Contact us</a>
-            <a href="https://github.com/Dob6458" class="menu">Github</a>
-          </div>
-        </div>
+    <div class="black"></div>
+    <div class="header">
+      <div class="logo">
+        <img
+          src="img/icon.png"
+          alt="img_logo"
+          width="42px"
+          height="42px" />
       </div>
-      <div class="container">
-        <div class="summaries">
-          <a class="disable" disabled>Get Started</a>
-          <a href="options.html">Options</a>
-          <a href="events.html">Events</a>
-        </div>
-        <div class="page">
-          <h1>Get Started</h1>
-          <hr>
-          Before using, we will explain you what is <b>Typing.js</b>. It's a library that allows to type your
-          sentence(s) automatically when you make an animation in HTML.
-          <br/>
-          <h2>Importation</h2>
-          To use <b>Typing.js</b>, Import via CDN or download it on <a href="https://github.com/Dob6458/Typingjs/releases">Github</a>
-          <br/>
-          Normal file:
-          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-symbol" style="color: rgb(188, 96, 96);">https:</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">//cdn.jsdelivr.net/gh</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">/Dob6458/typingjs</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">/libs/typing.js</span> (Normal file)</pre>
-          Minified file:
-          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-symbol" style="color: rgb(188, 96, 96);">https:</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">//cdn.jsdelivr.net/gh</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">/Dob6458/typingjs</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">/libs/typing.min.js</span> (Minified file)</pre>
-          Then, import this file via <code>&lt;script&gt;</code> tag in your <code>index.html</code> file.
-          <br>
-          <h2>Initalization</h2>
-          Once imported, let's create a <code>script.js</code> file and make a link.
-          <br/>
-          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name" style="font-weight: 700;">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string" style="color: rgb(136, 0, 0);">"typing"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="font-weight: 700;">script</span>&gt;</span></span></pre>
-          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-built_in" style="color: rgb(57, 115, 0);">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">function</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword" style="font-weight: 700;">var</span> typing = <span class="hljs-keyword" style="font-weight: 700;">new</span> Typing(<span class="hljs-string" style="color: rgb(136, 0, 0);">"#typing"</span>);
-}</pre>
-          <div class="dialog-warn">
-            /!\: If you don't use <code>window.onload</code>, he doesn't work.
-          </div>
-          <h2>Result:</h2>
-          <script>
-            $(function() {
-              $(".run").click(function() {
-                new Typing("#typing", {
-                  "string": "Typing.js is working successfuly"
-                });
-              })
-            });
-          </script>
-          <span id="typing"></span>
-          <br />
-          <br />
-          <button class="run">Run</button>
-        </div>
-      </div>
-      <div class="footer">
-        Created by Dob6458 (// Zohir) - 2019&copy;
+      <button class="menu-icon">
+        <i class="material-icons">
+          menu
+        </i>
+      </button>
+      <div class="menus">
+        <a href="https://discord.gg/x8Pr7fq" class="menu">Rejoin us on Discord</a>
+        <a href="mailto:dob6458@outlook.com" class="menu">Contact us</a>
+        <a href="https://github.com/Dob6458" class="menu">Github</a>
       </div>
     </div>
-
+    <div class="app">
+      <div class="container">
+        <div class="pages">
+          <div class="summaries">
+            <span class="item selected">Get Started</span>
+            <span class="item" onclick="window.open('options.html', '_self')">Options</span>
+            <span class="item" onclick="window.open('events.html', '_self')">Events</span>
+          </div>
+          <div class="page">
+            <h1>Get Started</h1>
+            <hr>
+            Before using, we will explain you what is <b>Typing.js</b>. It's a library that allows to type your
+            sentence(s) automatically when you make an animation in HTML.
+            <br />
+            <h2>Importation</h2>
+            To use <b>Typing.js</b>, Import via CDN or download it on <a href="https://github.com/Dob6458/Typingjs/releases">Github</a>
+            <br />
+            Normal file:
+            <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-symbol" style="color: rgb(188, 96, 96);">https:</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">//cdn.jsdelivr.net/gh</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">/Dob6458/typingjs</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">/libs/typing.js</span> (Normal file)</pre>
+            Minified file:
+            <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-symbol" style="color: rgb(188, 96, 96);">https:</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">//cdn.jsdelivr.net/gh</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">/Dob6458/typingjs</span><span class="hljs-regexp" style="color: rgb(188, 96, 96);">/libs/typing.min.js</span> (Minified file)</pre>
+            Then, import this file via <code>&lt;script&gt;</code> tag in your <code>index.html</code> file.
+            <br>
+            <h2>Initalization</h2>
+            Once imported, let's create a <code>script.js</code> file and make a link.
+            <br />
+            <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name" style="font-weight: 700;">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string" style="color: rgb(136, 0, 0);">"typing"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="font-weight: 700;">script</span>&gt;</span></span></pre>
+            <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-built_in" style="color: rgb(57, 115, 0);">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword" style="font-weight: 700;">var</span> typing = <span class="hljs-keyword" style="font-weight: 700;">new</span> Typing(<span class="hljs-string" style="color: rgb(136, 0, 0);">"#typing"</span>);
+}</pre>
+            <div class="dialog-warn">
+              /!\: If you don't use <code>window.onload</code>, he doesn't work.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/index.js"></script>
   </body>
 </html>

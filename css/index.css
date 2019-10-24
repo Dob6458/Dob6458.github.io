@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:100,300,400,500,700,900|Roboto:100,300,400,500,700,900|Satisfy:100,300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons');
 
 body {
   font-family: "Roboto";
@@ -11,37 +12,7 @@ body {
 .header {
   width: 100% auto;
 
-  position: sticky;
-
   padding: 8px 16px;
-}
-
-.logo, .menus {
-  display: inline-block;
-}
-
-.menus {
-  position: absolute;
-
-  top: 0;
-  right: 16px;
-  bottom: 0;
-
-  line-height: 62px;
-}
-
-.menus > .menu {
-  padding-left: 4px;
-  padding-right: 4px;
-
-  color: white;
-  text-decoration: none;
-
-  user-select: none;
-}
-
-.menus > .menu:hover {
-  text-decoration: underline;
 }
 
 .presentation {
@@ -72,7 +43,7 @@ body {
   height: fit-content;
 
   color: white;
-  font-size: 60px;
+  font-size: 210%;
 }
 
 .container {
@@ -98,7 +69,7 @@ body {
   border-radius: 4px;
   padding: 12px;
 
-  height: 140px;
+  height: 170px;
 
   position: relative;
 }
@@ -178,15 +149,123 @@ h6 {
   margin: 0;
 }
 
-.footer {
-  width: 100% auto;
-  padding: 12px 16px;
+/* Start responsive mobile */
+@media screen and (max-width: 799px) {
+  .header {
+    z-index: 2;
+    position: fixed;
 
-  margin-top: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
 
-  background-color: #212121;
-  color: white;
+    background-color: #68aae3;
+    overflow: hidden;
+
+    height: 46px;
+
+    transition: 200ms;
+
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.22);
+  }
+
+  .menu-icon {
+    width: 42px;
+    height: 42px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: block;
+  }
+
+  .menus {
+    margin-top: 12px;
+  }
+
+  .menus > .menu {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    line-height: 26px;
+  }
+
+  .menu:hover {
+    padding-left: 8px;
+    transition: 150ms;
+  }
+
+  .app {
+    margin-top: 62px;
+  }
+
+  .black {
+    z-index: 1;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.22);
+  }
 }
+
+@media screen and (min-width: 800px) {
+  .header {
+    z-index: 1;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #68aae3;
+    overflow: hidden;
+
+    height: 46px;
+
+    transition: 200ms;
+
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.22);
+  }
+  
+  .menus {
+    position: absolute;
+  
+    top: 0;
+    right: 16px;
+    bottom: 0;
+  
+    line-height: 62px;
+  }
+  
+  .menus > .menu {
+    padding-left: 4px;
+    padding-right: 4px;
+  
+    color: white;
+    text-decoration: none;
+  
+    user-select: none;
+  }
+
+  .menu-icon {
+    visibility: hidden;
+  }
+  
+  .menus > .menu:hover {
+    text-decoration: underline;
+  }
+
+  .app {
+    margin-top: 62px;
+  }
+}
+/* End responsive mobile */
 
 @media screen and (min-width: 748px) {
   .projects {
